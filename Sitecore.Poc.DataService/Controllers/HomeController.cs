@@ -26,7 +26,6 @@ namespace Sitecore.Poc.DataService.Controllers
         {
             ViewBag.DocumentationProvider = Configuration.Services.GetDocumentationProvider();
             return View(Configuration.Services.GetApiExplorer().ApiDescriptions);
-
         }
     }
 }
