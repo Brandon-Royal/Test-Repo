@@ -1,0 +1,22 @@
+﻿@using System.Web.Http.Controllers
+@using System.Web.Http.Description
+@model System.Collections.ObjectModel.Collection<ApiDescription>
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    // Group APIs by controller
+    ILookup<HttpControllerDescriptor, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor);
+}
+
+<h2>Data Service</h2>
+
+<section class="content-wrapper main-content clear-fix">
+    @foreach (var group in apiGroups)
+    {
+        @*@Html.DisplayFor(m => group, "ApiGroup")*@
+        <h3>@group.Key.ControllerName</h3>
+        @group.Key.
+    }
+</section>
