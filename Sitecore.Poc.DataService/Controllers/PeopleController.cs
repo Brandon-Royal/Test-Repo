@@ -26,6 +26,7 @@ namespace Sitecore.Poc.DataService.Controllers
         public IEnumerable<Person> Get()
         {
             return _repository.GetAll();
+
         }
 
         /// <summary>
